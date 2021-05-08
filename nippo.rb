@@ -2,7 +2,7 @@ class Nippo < Formula
   desc "自動日報ジェネレーター"
   homepage ""
   url "https://github.com/MasatoraAtarashi/nippo/releases/download/v0.0.3/nippo"
-  sha256 "6e397c03469e24dae5c2fe7a18566ede403f793009b6bd426b74d5adda73a4f6"
+  sha256 "2dc4b812934f381d0d9ef23e59808115b5945c7fef26596c9daaeb0582492de9"
   license "Apache-2.0"
 
   # depends_on "cmake" => :build
