@@ -1,7 +1,7 @@
 class Nippo < Formula
   desc "自動日報ジェネレーター"
   homepage ""
-  url "https://github.com/MasatoraAtarashi/nippo/archive/refs/tags/v0.0.3.tar.gz"
+  url "https://github.com/MasatoraAtarashi/nippo/releases/download/v0.0.3/nippo"
   sha256 "6e397c03469e24dae5c2fe7a18566ede403f793009b6bd426b74d5adda73a4f6"
   license "Apache-2.0"
 
