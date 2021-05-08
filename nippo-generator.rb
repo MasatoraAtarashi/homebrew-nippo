@@ -8,6 +8,7 @@ class NippoGenerator < Formula
   # depends_on "cmake" => :build
 
   def install
+    ls
     bin.install "nippo-generator"
   end
 end
