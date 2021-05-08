@@ -1,6 +1,7 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+require "formula"
+
+HOMEBREW_NIPPO_GENERATOR_VERSION='0.0.2'
+
 class NippoGenerator < Formula
   desc "自動日報ジェネレーター"
   homepage "https://github.com/MasatoraAtarashi/nippo-generator"
