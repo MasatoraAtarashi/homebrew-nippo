@@ -12,11 +12,17 @@ class NippoGenerator < Formula
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    print buildpath
+    ENV["GOPATH"] = buildpath
+    nippo_path = buildpath/"src/github.com/MasatoraAtarashi/nippo-generator/"
+    nippo_path.install buildpath.children
+
+    # ソースコードのbuildPathに移動した後、depコマンドで依存パッケージを取得し、buildを行う。
+    cd nippo_path do
+      system "dep", "ensure", "-vendor-only"
+      system "go", "build"
+      bin.install "imemo"
+    end
   end
 
   test do
